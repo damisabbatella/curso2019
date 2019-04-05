@@ -1,0 +1,16 @@
+body{
+	background-color: gray;
+}
+
+/* con esto hacemos que el div sea de river */
+div{
+	color: red; /* aca ponemos el color del texto */
+	border: 1px solid red; /*el borde rojo con linea continua */
+	background-color: white; /* color de fondo blanco */
+	text-align: center; /* texto centrado */
+	width: 200px; /* el ancho*/
+	height: 60px; /* el alto */
+	line-height: 60px;/* para centrar texto en la vertical*/
+	font-size: 38px;/* tamaño de la fuente*/
+	margin: 0 auto; /* esto sirve para centrar el elemento*/
+}

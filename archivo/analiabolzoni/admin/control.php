@@ -1,0 +1,14 @@
+<?php 
+
+session_start();
+	 
+if(!isset($_SESSION["usuario"])){
+   
+	  session_unset();
+      session_destroy();
+	  header("location:index.php?error=2");
+      
+}	
+
+
+?> 

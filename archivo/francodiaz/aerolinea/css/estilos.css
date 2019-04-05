@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Anton|Oswald);
+
+
+
+#contenedor{
+	background-color: orange;
+	width: 600px;
+	height: 300px;
+	margin: 100px auto;
+	border-radius: 10px;
+}
+
+body {
+	background-image: url(../imagenes/sanclemente.jpg);
+	background-size: cover;
+}
+
+.aeropuerto {
+	float: left;
+	margin-left: 15px;
+	color:white;
+	font-size: 16px;
+	margin-top: 5px;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.fechas {
+	float: left;
+	margin-left: 15px;
+	color:white;
+	font-size: 16px;
+	margin-top: 5px;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.fechas div{
+	float: left;
+}
+
+.fechas input {
+	width: 70px;
+}
+
+
+#calendario {
+	position: absolute;
+	display: none;
+	width: 300px;
+	height: 230px;
+	background-color: white;
+	box-shadow: 1px 1px 8px black;
+	
+}
+
+#calendario #nombremes{
+	width:300px;
+	background-color: orange;
+	color:white;
+
+}
+
+#calendario div {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	width: 42px ;
+	height: 27px; 
+	border-bottom: 1px solid gray;
+	float: left;
+	color: orange;
+	text-align: center;
+	line-height: 27px;
+}
+
+#calendario div span{
+	background-color: orange;
+
+}
+
+#calendario div b{
+	width: 25px ;
+	height: 25px;
+	margin-left: 8px; 
+	border-radius: 50%;
+	background-color: #434343;
+	display: block;
+	margin-top: 1px;
+	line-height: 25px;
+}
+
+#calendario div i{
+	display: block;
+	width: 42px ;
+	height: 27px;
+	color:gray;
+	text-shadow: 0.02em 0.02em 0.02em black;
+}
+
+#calendario div i:hover{
+	background-color: white;
+}
+em{
+	display: block;
+	color:gray;
+	width: 42px ;
+	height: 27px; 
+}
+
+em:hover{
+
+	background-color: white;
+}
+
+#calendario #adelante{
+	float: right;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.3) ;
+	border:none;
+	width: 22px;
+	height: 22px;
+	top: 2px;
+	position: relative;
+
+}
+
+#calendario #adelante:hover,#calendario #atras:hover{
+	background-color: rgba(255,255,255,0.5)
+}
+
+#calendario #atras{
+	float: left;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.3) ;
+	border:none;
+	width: 22px;
+	height: 22px;
+	top: 2px;
+	position: relative;
+
+}

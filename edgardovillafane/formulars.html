@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+ <form action="http://www.rentparisflat.com/reservar.php" method="post">
+        <div class="nombre">
+          <p>Name</p>
+          <input name="nombre" type="text" />
+        </div>
+        <div class="email">
+          <p>E-mail</p>
+          <input name="email" type="text" />
+        </div>
+        <div class="check">
+          <p>Check-in </p>
+          <input name="in" id="in" type="text" onclick="abrecalendario('in')" />
+        </div>
+        <div class="check">
+          <p>Check-out </p>
+          <input name="out" id="out" type="text" onclick="abrecalendario('out')" />
+        </div>
+        <div id="noches"></div>
+        <div class="huespedes"><span>Adults:
+          <select name="adult">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          </span><span> Children:
+          <select name="children">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          </span></div>
+         <div class="comentario">
+          <p>Comments</p>
+          <textarea name="mensaje" ></textarea>
+        </div>
+        <div>
+          <input name="" type="submit" value="send now" />
+        </div>
+        <input name="apto" type="hidden" value="Boutique_English" />
+      </form>
+      <div id="calendariobook"></div>
+
+</body>
+</html>

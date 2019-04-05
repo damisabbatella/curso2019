@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aerolinea Diaz&Diaz</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<script type="text/javascript" src="js/funciones.js"></script>
+
+<body>
+    <div id="contenedor">
+        <div class="aeropuerto" id="origen">
+            <label>Origen</label>
+            <input type="text">
+        </div>
+        <div class="aeropuerto" id="destino">
+            <label>Destino</label>
+            <input type="text">
+        </div>
+        <div class="fechas">
+            <div id="ida">
+            	<label>Ida</label>
+            <input type="text" onclick="ida()" id="fechaida">
+                <div id="calendario"></div>
+            </div>
+            <div id="vuelta">
+            	<label>Vuelta</label>
+            <input type="text" onclick="vuelta()" id="fechavuelta">
+            </div>
+        </div>
+    </div>
+
+    <input type ="hidden" id="mes">
+    <input type ="hidden" id="ano">
+</body>
+
+</html>

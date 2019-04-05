@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('../fuentes/ventilla_script-webfont.eot');
+    src: url('../fuentes/ventilla_script-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/ventilla_script-webfont.woff') format('woff'),
+         url('../fuentes/ventilla_script-webfont.ttf') format('truetype'),
+         url('../fuentes/ventilla_script-webfont.svg#alex_brushregular') format('svg'); 
+}
+@font-face {
+    font-family: 'pistara';
+    src: url('../fuentes/pistara-webfont.eot');
+    src: url('../fuentes/pistara-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/pistara-webfont.woff') format('woff'),
+         url('../fuentes/pistara-webfont.ttf') format('truetype'),
+         url('../fuentes/pistara-webfont.svg#pistara') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+  font-size: 62.5%;
+}
+body {
+	margin:0;
+}
+#todo{
+	width:100%;
+	height:100%;
+	background-color:rgba(227,227,227,1.00);
+	position:absolute;
+	overflow:hidden;
+}
+#izquierda{
+	width:100%;
+	height:100%;
+}
+#nombre{
+	font-family:'alex_brushregular';
+	font-size:2em;
+	color:#00355f;
+	margin-left:0.1em;
+	margin-top:0.1em;
+}
+#texto1{
+	width:40%;
+	font-family:'pistara';
+	font-size:0.3em;
+	line-height:1em;
+	color:#0072c3;
+	margin-left:1em;
+}
+#texto2{
+	width:40%;
+	font-family:'pistara';
+	font-size:0.3em;
+	line-height:1em;
+	color:#0072c3;
+	margin-left:1em;
+	margin-top:1em;
+}
+.botones{
+	width:100%;
+	height:25%;
+	cursor:pointer;
+}
+.currentRES{
+	width:98%;
+	height:100%;
+	font-family:'pistara';
+	font-size:0.4em;
+	float:left;
+	padding-left:1%;
+	box-sizing:border-box;
+	transition:all .2s ease-out;
+	color:#333;
+	background-image:url(../imagenes/stripesblack2.png);
+}
+.currentBTN{
+	width:100%;
+	height:25%;
+}
+.currentBOR{
+	width:2%;
+	height:100%;
+	background-color:rgba(255,255,255,1.00);
+	float:left;
+	transition:all .2s ease-out;
+}
+#resto1{
+	background-color:#16b7ff;
+}
+#resto2{
+	background-color:#009cff;
+}
+#resto3{
+	background-color:#0072c3;
+}
+#resto4{
+	background-color:#00355f;
+}
+#btn1:hover > .restos {
+	background-image:url(../imagenes/stripesblack2.png);
+	color:#2b334e;
+}
+#btn1:hover > .bordes {
+	background-color:rgba(255,255,255,1.00);
+}
+#btn2:hover > .restos {
+	background-image:url(../imagenes/stripesblack2.png);
+	color:#2b334e;
+}
+#btn2:hover > .bordes {
+	background-color:rgba(255,255,255,1.00);
+}
+#btn3:hover > .restos {
+	background-image:url(../imagenes/stripesblack2.png);
+	color:#2b334e;
+}
+#btn3:hover > .bordes {
+	background-color:rgba(255,255,255,1.00);
+}
+#btn4:hover > .restos {
+	background-image:url(../imagenes/stripesblack2.png);
+	color:#2b334e;
+}
+#btn4:hover > .bordes {
+	background-color:rgba(255,255,255,1.00);
+}
+.bordes{
+	width:2%;
+	height:100%;
+	background-color:#2b334e;
+	float:left;
+	transition:all .2s ease-out;
+}
+.restos{
+	width:98%;
+	height:100%;
+	font-family:'pistara';
+	font-size:0.4em;
+	color:rgba(255,255,255,1.00);
+	float:left;
+	padding-left:1%;
+	box-sizing:border-box;
+	transition:all .2s ease-out;
+	background-color:#85B8D6;
+}
+#derecha{
+	width:4.3em;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:100%;
+	transition:all .2s ease-out;
+}
+#contenido{
+	width:80%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:-80%;
+	transition:all .2s ease-out;
+	background-color:#CCC;
+	transition:all .4s ease-out;
+	z-index:50;
+}
+#titulo{
+	font-family:'pistara';
+	font-size:0.6em;
+	color:rgba(255,255,255,1.00);
+	margin-left:0.2em;
+	opacity:0;
+	transition:all .3s ease-out;
+}
+#navegador{
+	width:0.7em;
+	height:0.7em;
+	position:fixed;
+	top:0.3em;
+	left:90%;
+	cursor:pointer;
+	border-radius:0.1em;
+	transition:all .2s ease-out;
+}
+#navegador:hover{
+	background-color:#FFF;
+}
+#navegador:hover > #navi .barras{
+	background-color:#009cff;
+}
+#navi{
+	width:0.4em;
+	height:0.4em;
+	margin:0 auto;
+	margin-top:0.22em;
+}
+.barras{
+	width:100%;
+	height:0.08em;
+	background-color:#00355f;
+	border-radius:0.04em;
+	margin-top:0.18rem;
+	transition:all .2s ease-out;
+}

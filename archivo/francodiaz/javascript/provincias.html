@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+    function saludar() {
+        var provincia = document.getElementById("provincia").value
+        var edad = document.getElementById("edad").value
+        var nombre = document.getElementById("nombre").value
+
+
+        if (edad >= 18) {
+            var mayoria = "mayor"
+        } else {
+            var mayoria = "menor"
+        }
+        if (document.getElementById("varon").checked == true) {
+            var articulo = "un"
+            if (provincia == "Jujuy") {
+                var provinciano = "jujeño"
+
+            }
+
+            if (provincia == "Santa Fe") {
+                var provinciano = "santafesino"
+
+            }
+
+            if (provincia == "Salta") {
+                var provinciano = "salteño"
+
+            }
+
+            if (provincia == "Chubut") {
+                var provinciano = "chubutense"
+
+            }
+
+
+
+        } else {
+            var articulo = "una"
+
+            if (provincia == "Jujuy") {
+                var provinciano = "jujeña"
+
+            }
+
+            if (provincia == "Santa Fe") {
+                var provinciano = "santafesina"
+
+            }
+
+            if (provincia == "Salta") {
+                var provinciano = "salteña"
+
+            }
+
+            if (provincia == "Chubut") {
+                var provinciano = "chubutense"
+
+            }
+
+
+        }
+        alert("Hola soy " + nombre + " y soy "+ articulo + " "+ provinciano +" "  +mayoria + " de edad"  )
+    }
+    </script>
+</head>
+
+<body>
+    Nombre
+    <input type="text" id="nombre">
+    <input type="radio" name="sexo" value="M" id="varon" checked=checked>
+    <input type="radio" name="sexo" value="F" id="mujer"> Edad
+    <input type="text" id="edad">
+    <select id="provincia">
+        <option value="Jujuy">Jujuy</option>
+        <option value="Santa Fe">Santa Fe</option>
+        <option value="Salta">Salta</option>
+        <option value="Chubut">Chubut</option>
+    </select>
+    <button onclick="saludar()">Verificar</button>
+</body>
+
+</html>

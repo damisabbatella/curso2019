@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<style>
+/* formulario  */
+
+input[type="text"],
+textarea {
+ font-family: Tahoma, Geneva, sans-serif;
+ color: #4a5f78;
+ padding-left: 5px;
+ border: 1px solid #ccc;
+ outline: none;
+ font-size: 16px;
+}
+input:focus,
+textarea:focus {
+ background-color: #D2D2D2;
+ -webkit-transition: background-color .2s ease-in-out;
+ transition: background-color .2s ease-in-out;
+}
+#nombre, #cnombre {
+ width: 400px;
+ height: 25px;
+ margin-left: 15px;
+ margin-bottom: 20px;
+}
+#email, #cemail {
+ width: 400px;
+ height: 25px;
+ margin-left: 15px;
+ margin-bottom: 20px;
+}
+#asunto, #casunto {
+ width: 400px;
+ height: 25px;
+ margin-left: 15px;
+ margin-bottom: 20px;
+}
+#mensaje, #cmensaje {
+ width: 400px;
+ height: 85px;
+ margin-left: 15px;
+ margin-bottom: 20px;
+}
+#boton {
+ width: 400px;
+ height: 45px;
+ margin-left: 15px;
+ border-radius: 5px;
+ margin-bottom: 20px;
+ box-shadow: 1px 1px 2px 1px #4a5f78;
+ font-family: Tahoma, Geneva, sans-serif;
+ color: #FFF;
+ font-size: 20px;
+ background-color: #4a5f78;
+}
+#contnombre div {
+ font-family: Verdana, Geneva, sans-serif;
+ color: #FFF;
+ font-size: 20px;
+ padding-left: 10px;
+ padding-top: 3px;
+ position: absolute;
+ width: 360px;
+ height: 30px;
+ background-color: #B7C9FF;
+ margin-left: 440px;
+ border-radius: 5px;
+ box-shadow: 1px 1px 2px #4a5f78;
+}
+#div0 {
+ margin-top: -50px;
+}
+#div1 {
+ margin-top: -3px;
+}
+#div2 {
+ margin-top: 44px;
+}
+#contnombre div#div3 {
+ margin-top: 92px;
+ width: 360px;
+}
+#contnombre div#divenviado {
+ -webkit-transition: all .2s ease-in-out;
+ transition: all .2s ease-in-out;
+ margin-top: 202px;
+ width: 360px;
+}
+.infoformu {
+ margin-left: 18px;
+ color: #908e8e;
+ display: block;
+ float: left;
+ text-decoration: none;
+ padding: 10px;
+ border: 1px solid #cbcbcb;
+ background: rgb(252,255,244); /* Old browsers */
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(252,255,244,1)), color-stop(40%, rgba(223,229,215,1)), color-stop(100%, rgba(179,190,173,1))); /* Chrome,Safari4+ */
+ background: linear-gradient(to bottom, rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0 ); /* IE6-9 */
+}
+.infoformu:hover {
+ /* Chrome,Safari4+ */
+ background: -webkit-linear-gradient(top, rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%);
+ background: linear-gradient(to bottom, rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a', GradientType=0 ); /* IE6-9 */
+}
+
+
+</style>
+
+<script>
+
+/***** translations *****/
+
+
+var message5="Merci pour votre message";
+
+//ahora se pueden usar acentos !!! la ultima palabra corresponde al boton de "mandar"
+var campos= new Array("Nom","E-mail","Téléphone","Message","Envoyer")
+
+
+
+var menssage = {
+	"div0":"Votre nom, s'il vous plaît",
+	"div1":"Adresse e-mail incorrecte",
+	"div2":"Votre téléphone, s'il vous plaît",
+	"div3":"Votre message, s'il vous plaît"};
+
+
+/*********  end of translations   ********/	
+
+
+function sobre(campo,ind)
+{
+	var texto=campos[ind];
+fi = document.getElementById('contnombre'); 
+if(document.getElementById("div"+ind)){
+fi.removeChild(document.getElementById("div"+ind)); 
+}
+if(document.getElementById(campo).value==texto){
+	
+	document.getElementById(campo).value=""
+}		
+}
+function irme(campo,ind)
+{
+var texto=campos[ind];		
+if(document.getElementById(campo).value==""){
+	
+	document.getElementById(campo).value=texto
+	
+}else{
+	
+	
+	document.getElementById(campo).style.backgroundColor="#FFF"
+	if(document.getElementById("div"+ind)){
+fi.removeChild(document.getElementById("div"+ind));
+	}
+	}	
+}
+//---------------------------------------------------------------------------------------------------validar	
+
+function verificar(){
+
+
+	
+var nombre=document.getElementById("cnombre")
+var email=document.getElementById("cemail")
+var asunto=document.getElementById("casunto")
+var mensaje=document.getElementById("cmensaje")
+ 
+
+if(document.getElementById("div0")||document.getElementById("div1")||document.getElementById("div2")||document.getElementById("div3")||document.getElementById("divenviado")){	
+}else{
+	
+	
+	if(nombre.value==campos[0]){
+	
+	muestraerror(0,'cnombre')
+
+		}
+	else if(email.value==campos[1]){
+
+     muestraerror(1,'cemail')
+		} 
+
+	else if(asunto.value==campos[2]){
+	 muestraerror(2,'casunto')
+
+		}
+	else if(mensaje.value==campos[3]){
+	 muestraerror(3,'cmensaje')
+
+		}else{
+	//document.forms.formulario.submit()
+	
+var fi=document.getElementById("contnombre");
+	var contenedor = document.createElement('div');
+    contenedor.id = 'divenviado'; 
+    fi.appendChild(contenedor);
+	document.getElementById("divenviado").innerHTML =message5
+   enviamail();
+	
+	
+			}
+	}
+}
+
+function muestraerror(campoMay,campoMin){
+
+	var fi=document.getElementById("contnombre");
+	var contenedor = document.createElement('div');
+	document.getElementById(campoMin).style.backgroundColor="#B7C9FF"
+	var denom='div'+campoMay;
+    contenedor.id = denom;
+    fi.appendChild(contenedor);
+	document.getElementById(denom).innerHTML =menssage[denom]
+	
+	
+	}
+
+//----------------------------------------------------------------LEER MAS
+function readmore(){
+	document.getElementById("servicio0contenido").style.overflow="auto"
+	}
+function readless(){
+	document.getElementById("servicio0contenido").style.overflow="hidden"
+	document.getElementById("servicio0contenido").scrollTop=0;
+}
+
+function enviamail(){
+var nombre=document.getElementById("cnombre").value
+var email=document.getElementById("cemail").value
+var asunto=document.getElementById("casunto").value
+var mensaje=document.getElementById("cmensaje").value
+
+
+		var ajax = new XMLHttpRequest(); 
+     		ajax.open("post", "enviar.php", true); 
+     		ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+     		ajax.onreadystatechange=function(){
+        		if (ajax.readyState==4){
+					
+				document.getElementById("divenviado").innerHTML = ajax.responseText;
+				setTimeout("borramensaje()",2000)
+				}
+	 		}
+			var envio = "nombre="+nombre+"&email="+email+"&asunto="+asunto+"&mensaje="+mensaje
+			
+
+   			ajax.send(envio);
+	
+	}
+	
+function borramensaje(){
+var nombre=document.getElementById("cnombre")
+var email=document.getElementById("cemail")
+var asunto=document.getElementById("casunto")
+var mensaje=document.getElementById("cmensaje")
+var botone=document.getElementById("botone")
+	if(document.getElementById("divenviado")){
+	document.getElementById("contnombre").removeChild(document.getElementById("divenviado")); 
+	}
+	//una vez que envia limpia el formulario
+	
+	nombre.value=campos[0]
+	email.value=campos[1]
+	asunto.value=campos[2]
+	mensaje.value=campos[3]
+	botone.value=campos[4]
+	}		
+</script>
+</head>
+
+<body onload="borramensaje()">
+<div id="formulario">
+      <form class='contacto' name="formulario" method="post" action="">
+      <br /><br />
+        <div id="tituloformulario">FORMULARIO 
+</div>
+        <div id="contnombre">
+          <input type='text' class='nombre' id="cnombre" name="nombre"  onfocus="sobre(this.id,0)" onblur="irme(this.id,0)" />
+        </div>
+        <div>
+          <input type='text' class='email' id="cemail" name="email"  onfocus="sobre(this.id,1)" onblur="irme(this.id,1)" />
+        </div>
+        <div>
+          <input type='text' class='asunto' id="casunto"  name="asunto"  onfocus="sobre(this.id,2)" onblur="irme(this.id,2)" />
+        </div>
+        <div>
+          <textarea rows='6' class='mensaje' id="cmensaje" name="mensaje" onfocus="sobre(this.id,3)" onblur="irme(this.id,3)"></textarea>
+        </div>
+        <div>
+          <input type='button' value='Send' class='infoformu' id="botone"  onclick="verificar()" />
+        </div>
+      </form>
+    </div>
+
+</body>
+</html>

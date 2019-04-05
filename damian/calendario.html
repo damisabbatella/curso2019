@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calendario reserva</title> 
+	<script src="funcionesCALENDARIO_es.js"></script>
+	<link href="estilos.css" rel="stylesheet">
+
+</head>
+<body>
+
+<input type="text" placeholder="desde" id="desde">
+<input type="button" value="..." onclick="abrecalendario('desde')">
+<input type="text" placeholder="hasta" id="hasta">
+<input type="button" value="..." onclick="abrecalendario('hasta')">
+<input type="button" value="reservar" onclick="reservar()">
+<div id="calendariobook"></div>
+<input type="text" id="mesobook">
+<input type="text" id="anoobook">
+<input type="text" id="campofechabook">
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+/* http://www.templatemonster.com/demo/54785.html */
+
+body {
+    margin: 0
+}
+
+#contenido {
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#izq {
+    width: 55%;
+    height: 394px;
+    display: inline-block;
+    background-image: url(../imagenes/rueda1.jpg);
+    top: -34px;
+    position: relative;
+    margin: 0;
+    background-size: cover;
+}
+
+#der {
+    width: 45%;
+    height: 394px;
+    display: inline-block;
+    background-image: url(../imagenes/rueda2.png);
+    margin-left: -4px;
+    background-size: cover;
+}
+
+#contenido h2 {
+    font-size: 45px;
+    margin-bottom: 0;
+    margin-top: 150px;
+}
+
+#contenido h3 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+#contenido p {
+    color: white;
+    
+    font-size: 14px;
+    margin-left: 15px;
+    width: 80%;
+}
+
+.titulos {
+    color: white;
+    text-transform: uppercase;
+
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+.titulos:hover {
+    color: #f6b220;
+}
+
+
+.secundario{
+    display: inline inline-block;
+}
+
+#winter{
+    width: 33px;
+}
+
+#summer{
+    width: 33px;
+}
+
+#custom{
+    width: 33px;
+}

@@ -1,0 +1,76 @@
+CREATE TABLE `capitulos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `idcurso` int(11) NOT NULL,
+  `descripcion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+CREATE TABLE `cursos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `curso` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
+  `texto` text COLLATE utf8_spanish_ci NOT NULL,
+  `orden` int(11) NOT NULL,
+  `imagen` text COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `cursos` VALUES ('1', 'AJAX', 'Técnicas de Desarrollo Web interactivas ', '', '6', 'ajax.jpg', '1');
+INSERT INTO `cursos` VALUES ('3', 'JAVASCRIPT', 'Programación Javascript', '', '3', 'js.jpg', '1');
+INSERT INTO `cursos` VALUES ('4', 'PHP', 'Programación PHP', '', '4', 'php.jpg', '1');
+INSERT INTO `cursos` VALUES ('5', 'CSS 3', 'Diseño Web con CSS 3', '', '2', 'css.jpg', '1');
+INSERT INTO `cursos` VALUES ('8', 'HTML 5', 'Diseño web con HTML 5', '', '1', 'html5.jpg', '1');
+INSERT INTO `cursos` VALUES ('9', 'BOOTSTRAP', 'Diseño web Responsive', '', '7', 'bootstrap.jpg', '1');
+INSERT INTO `cursos` VALUES ('11', 'LARAVEL 5', 'Desarrollo web para alta productividad', '', '8', 'laravel.jpg', '1');
+INSERT INTO `cursos` VALUES ('12', 'MYSQL', 'Creación y modelado de Base de datos', '', '5', 'mysql.jpg', '1');
+
+CREATE TABLE `lecciones` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `idcurso` int(11) NOT NULL,
+  `idcapitulo` int(11) NOT NULL,
+  `titulo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `copete` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `usuarios` VALUES ('1', 'fgh', 'fgh', 'fgh', '0');
+INSERT INTO `usuarios` VALUES ('2', 'Juan', 'juan', 'juan', '0');
+INSERT INTO `usuarios` VALUES ('3', 'Juan', 'juan', 'juan', '0');
+INSERT INTO `usuarios` VALUES ('4', 'jose', 'jose', 'jose', '0');
+INSERT INTO `usuarios` VALUES ('5', 'xcv', 'xcv', 'xcv', '0');
+INSERT INTO `usuarios` VALUES ('6', 'xcv', 'xcv', 'xcv', '0');
+INSERT INTO `usuarios` VALUES ('7', 'cvb', 'cvb', 'cvb', '0');
+INSERT INTO `usuarios` VALUES ('8', 'Edgardo', 'Ggg', 'ggg', '0');
+INSERT INTO `usuarios` VALUES ('9', 'Juan', 'juan@dfgd.com', '1234', '0');
+INSERT INTO `usuarios` VALUES ('10', 'Juan', 'juan@dfgd.com', '1234', '1');
+INSERT INTO `usuarios` VALUES ('11', 'Ggggg', 'Fffff', 'rrrr', '0');
+INSERT INTO `usuarios` VALUES ('12', 'Uj', 'Hjj', 'uuu', '0');
+INSERT INTO `usuarios` VALUES ('13', 'sdf', 'sdf', 'sdf', '0');
+INSERT INTO `usuarios` VALUES ('14', 'cvb', 'cvb', 'cbv', '0');
+INSERT INTO `usuarios` VALUES ('15', 'cvb', 'cvb', 'cbv', '0');
+INSERT INTO `usuarios` VALUES ('16', 'ghjghjg', 'ghjghj', 'ghjg', '0');
+INSERT INTO `usuarios` VALUES ('17', 'cvbcvb', 'cvbcvb', 'cvb', '0');
+INSERT INTO `usuarios` VALUES ('18', 'zxc', 'zxc', 'zxc', '0');
+INSERT INTO `usuarios` VALUES ('19', 'ghj', 'ghj', 'ghj', '0');
+INSERT INTO `usuarios` VALUES ('20', 'jkl', 'jkl', 'jkl', '0');
+INSERT INTO `usuarios` VALUES ('21', 'sss', 'sss', '1234', '0');
+INSERT INTO `usuarios` VALUES ('22', 'hjkff', 'hjkff', '', '0');
+INSERT INTO `usuarios` VALUES ('23', 'admin', 'admin', '1234', '1');
+INSERT INTO `usuarios` VALUES ('24', 'dami', 'dami', '', '1');
+

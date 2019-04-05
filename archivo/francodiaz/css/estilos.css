@@ -1,0 +1,35 @@
+body{
+	background-color: pink;
+
+}
+div {
+	background-color: green;
+	color: yellow;
+	font-size: 38px;
+	width: 200px;
+	height: 60px;
+	border: 1px solid yellow;
+	text-align: center;
+	line-height: 60px;
+	margin: 0 auto;
+
+}
+
+#rojo{
+	background-color: red;
+	margin-top: 40px; 
+}
+#azul{
+	background-color: blue; 
+}
+.pie{
+	background-color: gray;
+	margin-top: 200px; 
+}
+#contenedor{
+background-color: transparent;	
+border:1px solid blue;
+width: 500px;
+height: 500px;
+
+}

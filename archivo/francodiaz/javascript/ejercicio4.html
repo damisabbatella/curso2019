@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <script type="text/javascript">
+    function saludar() {
+        var nombre = document.getElementById("nombre").value
+        var edad = parseInt(document.getElementById("edad").value)
+        var mayoria = ""
+        /*if (edad >= 18) {
+            mayoria = "mayor"
+        } else {
+            mayoria = "menor"
+        }*/
+
+        //La linea 18 utilizamos el If corto que es exactamente igual al if de la linea 12 a la 16.	
+        var mayoria = (edad >= 18) ? "mayor" : "menor";
+        alert("Me llamo " + nombre + " y tengo " + edad + " años y soy " + mayoria + " de edad.El año que viene cumplo " + (edad + 1) + ". El año pasado tenia " + (edad - 1))
+    }
+    </script>
+</head>
+
+<body>
+    Nombre:
+    <input type="text" id="nombre"> Edad:
+    <input type="number" id="edad">
+    <button onclick="saludar()">Saludar</button>
+</body>
+
+</html>

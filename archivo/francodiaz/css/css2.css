@@ -1,0 +1,58 @@
+
+div{border: 1px solid transparent}
+
+
+#contenedor {
+	position:relative;
+	background-image: url(../imagenes/fondotarjeta.png);
+	width: 400px;
+	height: 266px;
+	margin: 0 auto;
+	font-family: arial;
+}
+
+#nombre{
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 45px;
+}
+
+#profesion{
+	margin-top: 30px;
+	color: gray;
+	font-size: 30px;
+	text-align: center;
+	font-family: arial;
+}
+
+#telefono{
+	text-align: right;
+	background-image: url(../imagenes/icono-telefono.png);
+	width: 36px;
+	height: 41px;
+	display: inline-block;
+background-repeat: no-repeat;
+	padding-top: 23px;
+	padding-left: 64px;
+	top: -17px;
+	position:relative;
+}
+
+#direccion{
+	text-align: left;
+	margin-left: 7px;
+	width: 207px;
+display: inline-block;
+top: -17px;
+	position:relative;
+
+}
+
+#pie{
+	font-family: helvetica;
+	border-top: 1px solid gray;
+	width: 377px;
+	margin-left: 9px;
+margin-top: 55px;
+}

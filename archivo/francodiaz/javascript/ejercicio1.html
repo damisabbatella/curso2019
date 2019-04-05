@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio1</title>
+    <script type="text/javascript">
+    function verificar() {
+        var edad = document.getElementById('edad').value
+        if (edad == "") {
+            //aca sale un mensaje para completar la edad
+            alert("Complete la edad")
+                //aca le damos foco al campo del formulario - Deja el cursos titilando
+            document.getElementById('edad').focus()
+                //aca cambiamos el color de fondo del campo
+            document.getElementById('edad').style.backgroundColor = "#dedede"
+                //aca quitamos el reborde azul que viene por defecto en los campos que tienen foco
+            document.getElementById('edad').style.outline = "none"
+        } else {
+            //verificamos si esta dentro de un rango aceptable (entre 0 y 125 años)	
+            if (edad > 0 && edad < 125) {
+                if (edad >= 18) {
+                    alert("es mayor de edad")
+                } else {
+                    alert("es menor de edad")
+                }
+
+            }
+           else{
+           	alert("La edad no es valida")
+           }
+
+        }
+
+
+    }
+    </script>
+</head>
+
+<body>
+    Ingrese Edad
+    <input type="text" id="edad">
+    <button onclick="verificar()">Verificar</button>
+</body>
+
+</html>

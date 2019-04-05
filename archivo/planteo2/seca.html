@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
+<script>
+
+function TamVentana() {
+  var Tamanyo = [0, 0];
+  if (typeof window.innerWidth != 'undefined')
+  {
+    Tamanyo = [
+        window.innerWidth,
+        window.innerHeight
+    ];
+  }
+  else if (typeof document.documentElement != 'undefined'
+      && typeof document.documentElement.clientWidth !=
+      'undefined' && document.documentElement.clientWidth != 0)
+  {
+ Tamanyo = [
+        document.documentElement.clientWidth,
+        document.documentElement.clientHeight
+    ];
+  }
+  else   {
+    Tamanyo = [
+        document.getElementsByTagName('body')[0].clientWidth,
+        document.getElementsByTagName('body')[0].clientHeight
+    ];
+  }
+  return Tamanyo;
+}
+
+
+function redimensiona() {
+  var Tam = TamVentana();
+  if(Tam[0]>840){
+  var tamfuente=parseInt((Tam[0]*0.060))+"px";
+document.getElementsByTagName("body")[0].style.fontSize=tamfuente
+
+}
+};
+
+function anima(){
+		setTimeout(function(){
+
+	document.getElementById("textosl").style.left="0px"
+	document.getElementById("producto").style.left="700px"
+		document.getElementById("tira").style.opacity=1
+
+	document.getElementById("textosl").style.opacity=1
+	document.getElementById("producto").style.opacity=1
+	
+},1800)
+}
+window.onload=anima
+
+function abre(imagen){
+	document.getElementById("grande").style.opacity=0
+	
+	setTimeout(function(){
+		document.getElementById("grande").src=imagen
+	    document.getElementById("grande").style.opacity=1},300)
+	
+	}
+	
+
+</script>
+<link rel="stylesheet" href="estilos.css" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<header>
+  <div id="logo"><img src="imagenes/logo.jpg" id="logogrande"/></div>
+  <nav>
+    <div id="contenedorrojo">
+      <div id="logo"><img src="imagenes/logo-mini.png"/></div>
+      <ul id="menu">
+        <li><a href="#">
+          <div>Home</div>
+          <div class="fondo"></div>
+          </a>
+          <ul>
+          </ul>
+        <li><a href="#">
+          <div>Productos</div>
+          <div class="fondo"></div>
+          </a>
+          <ul>
+          </ul>
+        <li><a href="#">
+          <div>Instaladores</div>
+          <div class="fondo"></div>
+          </a>
+          <ul>
+          </ul>
+        <li><a href="#">
+          <div>Contacto</div>
+          <div class="fondo"></div>
+          </a>
+          <ul>
+          </ul>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section>
+  <div id="tira">
+    <div id="slider">
+      <div id="slide1">
+        <div id="textosl">
+          <h1>Placas Seca</h1>
+          <h2>La solución a la humedad</h2>
+          <hr/>
+          <div id="iconos">
+            <div id="cont-img-txt"> <img src="imagenes/icono1.png"/>
+              <p>Anti-humedad</p>
+            </div>
+            <div id="cont-img-txt"> <img src="imagenes/icono2.png"   alt=""/>
+              <p>Incombustible</p>
+            </div>
+            <div id="cont-img-txt"> <img src="imagenes/icono3.png"   alt=""/>
+              <p>Aislante acústico</p>
+            </div>
+            <div id="cont-img-txt"> <img src="imagenes/icono5.png"   alt=""/>
+              <p>Anti-hongos</p>
+            </div>
+            <div id="cont-img-txt"> <img src="imagenes/icono4.png"   alt=""/>
+              <p>Aislante termico</p>
+            </div>
+          </div>
+        </div>
+        <div id="producto"><img src="imagenes/zoom-porcelanato.png"   alt=""/></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+<div id="textoseca">
+  <h2>Elegí Seca:</h2>
+  <p> Gracias a la calidad de compuestos y la exclusiva formula de <b>Seca</b>, su problema de humedad quedara
+    totalmente solucionado. Colocando las Placas Anti Humedad SECA directamente sobre el foco de
+    humedad, usted lograra extraer la humedad de su pared paulatinamente impidiendo asi la formacion
+    de moho, bacterias y olores desagradables en el ambiente.</p>
+  <div id="contenedorcpg">
+    <div id="contenedor-cpg">
+      <div> <img src="imagenes/calidad.png"/>
+        <p>Para la elaboracion de las placas SECA utilizamos materia prima de excelente calidad, asi como un cuidado proceso y seleccion. Todo esto da como resultado un producto de excelente rendimiento y terminacion impecable.</p>
+      </div>
+    <div> <img src="imagenes/precio.png"/>
+      <p>Nuestro principal objetivo es entregar al cliente un producto de optima calidad, que cumpla con las espectativas tanto de particulares como de profecionales. Para esto nos enfocamos en tener stock y precio competitivo los 365 dias del año.</p>
+    </div>
+    <div> <img src="imagenes/garantia.png"/>
+      <p>Las placas SECA están diseñadas bajo exigentes estandares internacionales para garantizar un excelente resultado tratándose de humedad, sin descuidar el aspecto decorativo atravez del tiempo.</p>
+    </div>
+  </div>
+</div>
+<div id="fondogris">
+  <div id="contenedor">
+    <div id="contenedorgris">
+      <div><img src="imagenes/foto1.jpg" alt=""/><span>Productos</span> </div>
+      <div><img src="imagenes/foto2.jpg" width="370" height="220" alt=""/><span>Instaladores</span> </div>
+      <div><img src="imagenes/foto3.jpg" width="370" height="220" alt=""/><span> Contacto</span> </div>
+    </div>
+  </div>
+</div>
+<footer>
+</footer>
+<script type="text/javascript"> 
+         $(window).scroll(function () {
+			 var altura= $(window).scrollTop()
+			 if(altura>250){
+			
+				 document.getElementById("logogrande").style.marginTop="0px";
+				  document.getElementById("logogrande").style.width="160px";
+				 }else{
+			 
+					document.getElementById("logogrande").style.marginTop="0px";
+					 document.getElementById("logogrande").style.width="230px";
+					 }
+
+         })
+          </script>
+</body>
+</html>

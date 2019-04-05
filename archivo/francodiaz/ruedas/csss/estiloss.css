@@ -1,0 +1,19 @@
+/* http://www.templatemonster.com/demo/54785.html */
+body {
+	margin: 0
+}
+
+#izq{
+width: 55%;
+height: 590px;
+display: inline-block;
+background-image: url(../cursocss/ruedas/imagenes/rueda1.jpg);
+}
+
+#der{
+width: 43%;
+height: 590px;
+display: inline-block;
+background-image: url(../imagenes/rueda2.png);
+}
+

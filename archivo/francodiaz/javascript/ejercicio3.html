@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+	<title>Ejercicio 3</title>
+	<script type="text/javascript">
+
+	function saludar(){
+		var nombre=document.getElementById("nombre").value
+		var edad=document.getElementById("edad").value
+		alert("hola me llamo "+nombre+ " y tengo "+edad+" años")
+	}
+
+//Hacer un formulario para ingresar el nombre y con un boton que llame a la funcion saludar y aparezca un alert con el saludo "hola franco" donde franco es la variable que ingresé en el input 
+
+//Ejercicio tres: ingresar el nombre y un segundo campo que sea para la edad y otro boton abajo que sea saludar, va a llamar a la funcion saludar y el mensaje que da es el siguiente : "Me llamo Edgardo y tengo 44 años" donde edgardo y 44 son variables que vienen de los campos de input.
+	</script>
+</head>
+<body>
+Nombre:
+<input type="text" id="nombre">
+Edad:
+<input type="number" id="edad">
+<button onclick="saludar()">Saludar</button>
+</body>
+</html>

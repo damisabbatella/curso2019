@@ -1,0 +1,154 @@
+/* estilos calendarios */
+#calendarios {
+	margin-right: 20px;
+	float: left;
+	width: 175px;
+	height: 200px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	display: none;
+	background-color: #FFF;
+	text-shadow: none;
+	color: #333;
+}
+#calendariobook {
+	margin-right: 20px;
+	float: left;
+	width: 177px;
+	height: 155px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	display: none;
+	background-color: #FFF;
+	text-shadow: none;
+	color: #333;
+	position: absolute;
+	z-index: 999;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	border-radius: 4px;
+	
+	-webkit-transition: opacity 0.7s ease-out;
+	transition: opacity 0.7s ease-out;
+	opacity: 0;
+}
+ #nombremesbook {
+	float: left;
+	width: 112px;
+	font-size: 9px;
+	text-align: center;
+	line-height: 18px;
+	text-transform: uppercase;
+	margin: 0px;
+}
+#bookonline #noches {
+	height: 20px;
+	width: 150px;
+	float: left;
+}
+#bookonline .huespedes {
+	height: 20px;
+	width: 185px;
+	float: left;
+	height: 25px;
+	margin-bottom: 20px;
+}
+#bookonline .huespedes span {
+	float: left;
+	width: 92px;
+}
+ #dsemanabook div {
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin-left: 0px;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	font-size: 9px;
+	text-align: center;
+	line-height: 18px;
+}
+ #dmesbook div {
+	float: left;
+	width: 18px;
+	height: 18px;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	background-color: #ccc;
+	margin-left: 0px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 18px;
+	cursor: pointer;
+}
+#dmesbook div:hover {
+	background-color: #D2E9FF;
+}
+ #botonadbook {
+	margin: 0px;
+	float: left;
+	width: 21px;
+	height: 21px;
+	background-image: url(../imagenes/flechas.png);
+	background-position: -56px 0px;
+	background-size: 76px 22px;
+}
+#botonatbook {
+	margin: 0px;
+	float: left;
+	width: 21px;
+	height: 21px;
+	background-image: url(../imagenes/flechas.png);
+	background-position: -36px 0px;
+	background-size: 76px 22px;
+}
+#botonad {
+	float: left;
+	width: 25px;
+	height: 25px;
+	background: url(../imagenes/flechas.png) -75px 0px;
+}
+#botonat {
+	float: left;
+	width: 25px;
+	height: 25px;
+	background: url(../imagenes/flechas.png) -50px 0px;
+}
+#botonad:hover {
+	background-position: 0px 0
+}
+#botonat:hover {
+	background-position: -25px 0
+}
+#nombremes {
+	float: left;
+	width: 125px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+#dsemanabook div {
+	float: left;
+	width: 24px;
+	height: 24px;
+	margin: 0px;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	font-size: 9px;
+	text-align: center;
+	line-height: 24px;
+}
+#dmesbook div {
+	float: left;
+	width: 24px;
+	height: 24px;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	background-color: #0C0;
+	margin: 0px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 24px;
+}

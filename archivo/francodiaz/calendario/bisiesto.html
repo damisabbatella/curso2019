@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
+</head>
+<script type="text/javascript">
+function verificar() {
+    var anio = document.getElementById('anio').value
+    if (!isNaN(anio)) {
+        if (anio >= -9999 && anio <= 9999) {
+            if (anio % 4 == 0) {
+                alert("Es bisiesto")
+
+            } else {
+                alert("No es bisiesto")
+            }
+        } else {
+            alert("Año invalido")
+        }
+    } else {
+        alert("Ingrese solo numeros")
+    }
+}
+
+</script>
+
+<body>
+    <input type="text" id="anio">
+    <button onclick="verificar()">Verificar</button>
+</body>
+
+</html>

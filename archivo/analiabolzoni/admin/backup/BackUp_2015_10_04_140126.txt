@@ -1,0 +1,371 @@
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `categorias` VALUES ('1', 'lana2', '016', '0');
+INSERT INTO `categorias` VALUES ('2', 'botoncitos', '0156', '1');
+INSERT INTO `categorias` VALUES ('3', 'hilos', '017', '1');
+INSERT INTO `categorias` VALUES ('4', 'Hilado mohair', '5567', '1');
+INSERT INTO `categorias` VALUES ('5', 'accesorios', 'ac12', '1');
+INSERT INTO `categorias` VALUES ('6', 'etiquetas', 'et01', '1');
+INSERT INTO `categorias` VALUES ('7', 'vestidos', 'v12', '1');
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `local` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `responsable` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `razon` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `cuit` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `iva` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `clientes` VALUES ('1', 'edgardo', 'polonia', '3434535', '01', '', '', '', '', '0');
+INSERT INTO `clientes` VALUES ('2', 'Analia Bolzoni', 'xxx', 'xx', 'xx', '', '', '', '', '1');
+INSERT INTO `clientes` VALUES ('3', 'Agustina', 'vv', 'vv', 'vv', '567567', '5675', '5675', '567', '1');
+INSERT INTO `clientes` VALUES ('4', 'chicki', 'Sandra', 'Nuevos emprendimientos s.a.', 'Ridvadavia 2045 2 A', '15-6541-9874', '20-22252687-7', 'inscripto', '05', '1');
+INSERT INTO `clientes` VALUES ('5', 'dfgdfg', 'dfgdf', 'dfg', 'dfg', 'dfg', 'dfg', 'dfg', 'dfg', '0');
+
+CREATE TABLE `colores` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `colores` VALUES ('1', 'ro98', 'rojo', '1');
+INSERT INTO `colores` VALUES ('2', 've45', 'verde', '1');
+INSERT INTO `colores` VALUES ('3', 'az67', 'azul', '1');
+INSERT INTO `colores` VALUES ('5', '00', 'n/a', '1');
+INSERT INTO `colores` VALUES ('6', '23', 'naranja', '1');
+INSERT INTO `colores` VALUES ('7', '45', 'violeta', '1');
+INSERT INTO `colores` VALUES ('8', '34', 'rtyrt', '0');
+INSERT INTO `colores` VALUES ('9', 'wer', 'wrwre', '0');
+INSERT INTO `colores` VALUES ('10', 'wer', 'wer', '0');
+INSERT INTO `colores` VALUES ('11', 'rty', 'rty', '0');
+INSERT INTO `colores` VALUES ('12', 'ghj', 'ghj', '0');
+INSERT INTO `colores` VALUES ('13', '456', 'ghj', '0');
+INSERT INTO `colores` VALUES ('14', 'dfg', 'dfgd', '0');
+INSERT INTO `colores` VALUES ('15', 'ghj', 'hgj', '0');
+INSERT INTO `colores` VALUES ('16', 'vbn', 'vbn', '0');
+INSERT INTO `colores` VALUES ('17', '5050', 'rojo 5050', '1');
+INSERT INTO `colores` VALUES ('18', '567', 'fgh', '1');
+INSERT INTO `colores` VALUES ('19', '567', 'rtytr', '1');
+INSERT INTO `colores` VALUES ('20', 'rtyrty', '45645', '1');
+INSERT INTO `colores` VALUES ('21', 'rtyr', '456456', '1');
+INSERT INTO `colores` VALUES ('22', '46456', '56456', '1');
+INSERT INTO `colores` VALUES ('23', '4565', '45645', '1');
+INSERT INTO `colores` VALUES ('24', '4565', '45656', '1');
+INSERT INTO `colores` VALUES ('25', '4566', '456456', '1');
+INSERT INTO `colores` VALUES ('26', '45656', '4565', '1');
+INSERT INTO `colores` VALUES ('27', '4564', '4566', '1');
+
+CREATE TABLE `consignaciones` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `fechaliq` date NOT NULL,
+  `idconsignatario` int(11) NOT NULL,
+  `estado` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `consignaciones` VALUES ('2', '2015-08-29', '0000-00-00', '2', '1', '1');
+INSERT INTO `consignaciones` VALUES ('3', '2015-08-29', '2015-09-28', '2', '1', '1');
+INSERT INTO `consignaciones` VALUES ('4', '2015-09-03', '2015-10-03', '3', '4', '1');
+INSERT INTO `consignaciones` VALUES ('5', '2015-09-08', '2015-10-08', '2', '5', '1');
+INSERT INTO `consignaciones` VALUES ('6', '2015-09-08', '2015-10-08', '3', '1', '1');
+INSERT INTO `consignaciones` VALUES ('7', '2015-09-08', '2015-10-08', '2', '4', '1');
+INSERT INTO `consignaciones` VALUES ('8', '2015-09-18', '2015-10-18', '2', '5', '1');
+INSERT INTO `consignaciones` VALUES ('9', '2015-09-28', '2015-10-28', '2', '1', '1');
+INSERT INTO `consignaciones` VALUES ('10', '2015-09-29', '2015-10-29', '2', '1', '1');
+
+CREATE TABLE `consignatarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `local` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `responsable` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `razon` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `cuit` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `iva` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `consignatarios` VALUES ('2', 'Marcelo Lopez', 'Marcelo', 'Iterario s.a.', 'Murguiondo 1594 2do D', '4687-6995', '20-22252879-7', 'inscripto', '02', '1');
+INSERT INTO `consignatarios` VALUES ('3', 'iterario', 'Edgardo', 'Edgardo Villafane s.a.', 'Polonia 7130', '4644-2659', '20-29987415-7', 'inscripto', '12', '1');
+
+CREATE TABLE `estados` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nomestado` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `estados` VALUES ('1', 'iniciado');
+INSERT INTO `estados` VALUES ('2', 'preparado');
+INSERT INTO `estados` VALUES ('3', 'entregado');
+INSERT INTO `estados` VALUES ('4', 'liquidado');
+INSERT INTO `estados` VALUES ('5', 'consignado');
+INSERT INTO `estados` VALUES ('6', 'vendido');
+
+CREATE TABLE `items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idconsignacion` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL,
+  `idtalle` int(11) NOT NULL,
+  `idcolor` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `items` VALUES ('1', '1', '4', '1', '1', '20');
+INSERT INTO `items` VALUES ('2', '1', '3', '2', '3', '32');
+INSERT INTO `items` VALUES ('3', '3', '6', '3', '6', '45');
+INSERT INTO `items` VALUES ('4', '3', '8', '1', '3', '23');
+INSERT INTO `items` VALUES ('9', '4', '6', '3', '6', '10');
+INSERT INTO `items` VALUES ('11', '4', '6', '3', '6', '5');
+INSERT INTO `items` VALUES ('12', '4', '8', '1', '3', '10');
+INSERT INTO `items` VALUES ('13', '5', '6', '3', '6', '1');
+INSERT INTO `items` VALUES ('14', '5', '8', '1', '3', '2');
+INSERT INTO `items` VALUES ('15', '5', '8', '1', '3', '3');
+INSERT INTO `items` VALUES ('16', '5', '6', '3', '6', '5');
+INSERT INTO `items` VALUES ('17', '5', '6', '3', '6', '2');
+INSERT INTO `items` VALUES ('18', '5', '6', '3', '6', '3');
+INSERT INTO `items` VALUES ('19', '5', '8', '1', '3', '2');
+INSERT INTO `items` VALUES ('20', '5', '6', '3', '6', '1');
+INSERT INTO `items` VALUES ('21', '5', '6', '3', '6', '2');
+INSERT INTO `items` VALUES ('22', '5', '6', '3', '6', '3');
+INSERT INTO `items` VALUES ('23', '5', '8', '1', '3', '4');
+INSERT INTO `items` VALUES ('24', '5', '8', '1', '3', '1');
+INSERT INTO `items` VALUES ('25', '5', '8', '1', '3', '3');
+INSERT INTO `items` VALUES ('26', '5', '8', '1', '3', '3');
+INSERT INTO `items` VALUES ('27', '5', '6', '3', '6', '3');
+INSERT INTO `items` VALUES ('28', '7', '6', '3', '6', '5');
+INSERT INTO `items` VALUES ('29', '7', '6', '3', '6', '5');
+INSERT INTO `items` VALUES ('31', '7', '6', '3', '6', '5');
+INSERT INTO `items` VALUES ('33', '7', '6', '3', '6', '10');
+INSERT INTO `items` VALUES ('34', '7', '8', '1', '3', '3');
+INSERT INTO `items` VALUES ('35', '8', '3', '1', '17', '2');
+INSERT INTO `items` VALUES ('36', '8', '3', '1', '17', '3');
+INSERT INTO `items` VALUES ('37', '8', '4', '1', '24', '1');
+INSERT INTO `items` VALUES ('38', '10', '3', '1', '17', '10');
+INSERT INTO `items` VALUES ('39', '10', '3', '1', '17', '5');
+INSERT INTO `items` VALUES ('40', '10', '4', '1', '24', '10');
+
+CREATE TABLE `itemsventas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idventa` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL,
+  `idtalle` int(11) NOT NULL,
+  `idcolor` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `itemsventas` VALUES ('2', '1', '4', '1', '24', '5');
+INSERT INTO `itemsventas` VALUES ('4', '2', '3', '1', '17', '10');
+INSERT INTO `itemsventas` VALUES ('5', '1', '4', '1', '24', '5');
+INSERT INTO `itemsventas` VALUES ('6', '3', '4', '1', '24', '5');
+
+CREATE TABLE `materiales` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `categoria` int(11) NOT NULL,
+  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `precio` float NOT NULL,
+  `unidad` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `materiales` VALUES ('1', 'al01', '3', 'hilado alma', '225', 'kg', '1');
+INSERT INTO `materiales` VALUES ('2', 'bo', '2', 'botones', '12', 'un', '1');
+
+CREATE TABLE `movimientos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `tipo` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL,
+  `idcliente` int(11) NOT NULL,
+  `cantidad` float NOT NULL,
+  `idcolor` int(11) NOT NULL,
+  `remito` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `movimientos` VALUES ('31', '2015-08-28', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `movimientos` VALUES ('32', '2015-09-08', '1', '1', '2', '2', '1', '', '1');
+INSERT INTO `movimientos` VALUES ('33', '2015-09-08', '1', '1', '2', '2.55', '1', '', '1');
+INSERT INTO `movimientos` VALUES ('34', '2015-09-15', '1', '1', '1', '12', '1', 'asdas', '1');
+INSERT INTO `movimientos` VALUES ('35', '2015-09-15', '1', '1', '1', '34', '2', '', '1');
+INSERT INTO `movimientos` VALUES ('36', '2015-09-15', '1', '1', '1', '32', '3', '', '1');
+INSERT INTO `movimientos` VALUES ('37', '2015-09-15', '1', '2', '1', '200', '5', '', '1');
+INSERT INTO `movimientos` VALUES ('38', '2015-09-15', '1', '2', '1', '45', '7', '', '1');
+INSERT INTO `movimientos` VALUES ('40', '2015-09-16', '1', '1', '1', '23', '2', '', '1');
+INSERT INTO `movimientos` VALUES ('46', '2015-09-16', '0', '0', '0', '0', '0', '', '1');
+INSERT INTO `movimientos` VALUES ('47', '2015-09-16', '0', '0', '0', '0', '0', '', '1');
+INSERT INTO `movimientos` VALUES ('48', '2015-09-16', '0', '0', '0', '0', '0', '', '1');
+INSERT INTO `movimientos` VALUES ('49', '2015-09-16', '1', '0', '0', '0', '0', '', '1');
+INSERT INTO `movimientos` VALUES ('50', '2015-09-16', '1', '0', '0', '0', '0', '', '1');
+INSERT INTO `movimientos` VALUES ('51', '2015-09-16', '1', '1', '1', '45', '1', '', '1');
+
+CREATE TABLE `movimientosprod` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `tipo` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `idcolor` int(11) NOT NULL,
+  `idtalle` int(11) NOT NULL,
+  `idpropietario` int(11) NOT NULL,
+  `observaciones` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `movimientosprod` VALUES ('3', '2015-09-16', '3', '3', '50', '17', '1', '2', '', '1');
+INSERT INTO `movimientosprod` VALUES ('4', '2015-09-16', '3', '4', '50', '24', '1', '1', '', '1');
+INSERT INTO `movimientosprod` VALUES ('5', '2015-09-16', '3', '4', '60', '6', '3', '1', '', '1');
+
+CREATE TABLE `ordenes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `tejedor` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `estado` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `ordenes` VALUES ('1', '2015-09-28', 'jose', '1', '1');
+
+CREATE TABLE `productos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `idcategoria` int(11) NOT NULL,
+  `precio` int(11) NOT NULL,
+  `preciomin` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `productos` VALUES ('3', 'saco', 'sac01', '1', '345', '0', '1');
+INSERT INTO `productos` VALUES ('4', 'chaleco', 'ch12', '2', '456', '0', '1');
+INSERT INTO `productos` VALUES ('6', 'Bufanda', 'bu12', '5', '200', '0', '1');
+INSERT INTO `productos` VALUES ('8', 'Vestido', '66545', '5', '300', '0', '1');
+INSERT INTO `productos` VALUES ('9', 'vestido noche', 'vn', '7', '300', '0', '1');
+INSERT INTO `productos` VALUES ('10', 'vbnvbn', '567', '2', '566', '676', '1');
+
+CREATE TABLE `stockmateriales` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idmaterial` int(11) NOT NULL,
+  `cantidad` float NOT NULL,
+  `idpropietario` int(11) NOT NULL,
+  `idcolor` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `stockmateriales` VALUES ('11', '1', '300', '2', '3', '1');
+INSERT INTO `stockmateriales` VALUES ('12', '1', '3', '2', '1', '1');
+INSERT INTO `stockmateriales` VALUES ('13', '1', '57', '1', '1', '1');
+INSERT INTO `stockmateriales` VALUES ('14', '1', '57', '1', '2', '1');
+INSERT INTO `stockmateriales` VALUES ('15', '1', '32', '1', '3', '1');
+INSERT INTO `stockmateriales` VALUES ('16', '2', '200', '1', '5', '1');
+INSERT INTO `stockmateriales` VALUES ('17', '2', '45', '1', '7', '1');
+INSERT INTO `stockmateriales` VALUES ('18', '2', '76', '1', '17', '1');
+
+CREATE TABLE `stockproductos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idproductos` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `idcolor` int(11) NOT NULL,
+  `idtalle` int(11) NOT NULL,
+  `idpropietario` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `stockproductos` VALUES ('15', '3', '20', '17', '1', '2', '1');
+INSERT INTO `stockproductos` VALUES ('16', '4', '50', '24', '1', '1', '1');
+INSERT INTO `stockproductos` VALUES ('17', '4', '60', '6', '3', '1', '1');
+
+CREATE TABLE `talles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `talles` VALUES ('1', '01', 'xl', '1');
+INSERT INTO `talles` VALUES ('2', '02', 'm', '1');
+INSERT INTO `talles` VALUES ('3', '03', 's', '1');
+INSERT INTO `talles` VALUES ('4', '00', 'n/a', '1');
+
+CREATE TABLE `terceros` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `local` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `responsable` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `razon` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `cuit` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `iva` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `terceros` VALUES ('1', 'tyu', 'tyu', 'tyu', 'tyu', 'tyu', 'tyu', 'tyu', 'tyu', '1');
+
+CREATE TABLE `tipomov` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nommov` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `tipomov` VALUES ('1', 'alta ', '0');
+INSERT INTO `tipomov` VALUES ('2', 'baja', '0');
+INSERT INTO `tipomov` VALUES ('3', 'alta ', '0');
+INSERT INTO `tipomov` VALUES ('4', 'baja', '0');
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `contrasena` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `usuarios` VALUES ('1', 'edgardo', 'edgardo@iterario.com', '', '0');
+INSERT INTO `usuarios` VALUES ('2', 'admin', 'admin', '1234', '1');
+
+CREATE TABLE `ventas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `idcliente` int(11) NOT NULL,
+  `estado` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `ventas` VALUES ('1', '2015-09-04', '2', '6', '1');
+INSERT INTO `ventas` VALUES ('2', '2015-09-28', '2', '6', '1');
+INSERT INTO `ventas` VALUES ('3', '2015-09-28', '3', '6', '1');
+INSERT INTO `ventas` VALUES ('4', '2015-09-29', '2', '1', '1');
+

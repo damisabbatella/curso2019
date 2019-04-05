@@ -1,0 +1,328 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("http://cdn.shopify.com/s/files/1/0889/3312/t/2/assets/fontawesome-webfont.eot");
+  src:  url("http://cdn.shopify.com/s/files/1/0889/3312/t/2/assets/fontawesome-webfont.eot?%23iefix") format('embedded-opentype'), 
+        url("http://cdn.shopify.com/s/files/1/0889/3312/t/2/assets/fontawesome-webfont.woff") format('woff'), 
+        url("http://cdn.shopify.com/s/files/1/0889/3312/t/2/assets/fontawesome-webfont.ttf") format('truetype'), 
+        url("http://cdn.shopify.com/s/files/1/0889/3312/t/2/assets/fontawesome-webfont.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+/* http://www.templatemonster.com/demo/54785.html */
+
+body {
+    margin: 0
+}
+
+#destacados {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    height: 394px;
+}
+
+#destacados p {
+    width: 80%;
+}
+
+#destacados h2 {
+    font-size: 45px;
+    margin-bottom: 0;
+}
+
+#destacados h3 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+#izq {
+    width: 55%;
+    height: 394px;
+    display: inline-block;
+    background-image: url(../imagenes/rueda1.jpg);
+    top: 0px;
+    position: relative;
+    margin: 0;
+    background-size: cover;
+}
+
+#der {
+    width: 45%;
+    height: 394px;
+    display: inline-block;
+    background-image: url(../imagenes/rueda2.png);
+    margin-left: -4px;
+    background-size: cover;
+}
+
+.titulos:hover {
+    color: #f6b220
+}
+
+.titulos {
+    margin-top: 80px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+p {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+#izq h4 {
+    line-height: color: #00ab4e;
+    border-top: #00ab4e 10px solid;
+    width: 50%;
+}
+
+#der h4 {
+    line-height: color: #00ab4e;
+    border-top: #00ab4e 10px solid;
+    width: 50%;
+}
+
+#secundario {
+    font-size: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    text-align: left;
+}
+
+#winter {
+    background-image: url(../imagenes/secundario1.png);
+    width: 33%;
+    height: 218px;
+    background-color: #00553c;
+    display: inline-block;
+    margin-left: 0;
+    background-size: cover;
+    margin: 10px #f6b220 solid;
+    transition: all 300ms ease-in-out;
+}
+
+#winter:hover {
+    background-color: #f6b220;
+    color: green;
+}
+
+#winter button {
+    width: 100px;
+    height: 37px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white !important;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: all 300ms ease-in-out;
+    font-weight: bold;
+}
+
+#winter button:hover {
+    background-color: white;
+    color: green;
+}
+
+#winter h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+#winter h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+#summer {
+    background-image: url(../imagenes/secundario2.png);
+    display: inline-block;
+    width: 33%;
+    height: 218px;
+    background-color: #00ab4e;
+    margin-left: -4px;
+    background-size: cover;
+}
+
+#summer:hover {
+    background-color: #f6b220;
+}
+
+#custom {
+    background-image: url(../imagenes/secundario3.png);
+    width: 33%;
+    height: 218px;
+    background-color: #f6b220;
+    display: inline-block;
+    margin-left: -4px;
+    background-size: cover;
+}
+
+#custom:hover {
+    background-color: #00553c;
+}
+
+#featured div {
+    width: 292px;
+    height: 292px;
+    transition: background 300ms ease-in-out;
+    position:relative;
+}
+
+#featured div img {
+    width: 292px;
+    height: 292px;
+
+}
+
+#featured div:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%)
+}
+#featured div span{
+
+    width:100px;
+    height: 30px;
+    background-color: yellow;
+    position:absolute;
+    top:250px;
+    opacity:0;
+        transition: all 200ms ease-in-out;
+}
+#featured div:hover>span {
+top:200px;
+opacity:1;
+
+    }
+.fa-thumbs-o-up:before {
+    content: "\f087";
+}
+.fa-refresh:before {
+    content: "\f021";
+}
+#animaciones{
+    width: 1170px;
+    height: 170px;
+    margin: 0 auto;
+    font-size: 39px;
+
+
+}
+    .icono {
+        color:white;
+        background-color:#f6b220 !important;
+        height: 170px;
+        width: 170px; 
+        float: left;
+        text-align: center;
+        font-size: 64px;
+        line-height: 170px;
+        transition: all 300ms ease-in-out;
+
+
+    }
+
+
+    .texto {
+        color: white;
+        background-color: #00ab4e;
+        height: 120px;
+        width: 415px;
+        float: left;
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+         transition: all 300ms ease-in-out;
+
+    }
+
+.col:hover>.icono{
+    width: 200px;
+    font-size: 100px;
+
+
+}
+
+.col:hover>.texto{
+    font-size: 35px;
+    width: 385px;
+    background-color: #00553c;
+
+}
+
+#mapa {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/********************** menu  ********************/
+
+nav{
+    background-color: #00553c;
+
+}
+
+nav ul {
+width: 1170px;
+margin: 0 auto;
+list-style: none;
+height: 100px;
+color:white;
+
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0 20px;
+    line-height: 100px;
+    text-transform: capitalize;
+    margin: -2px;
+}
+
+
+nav ul li:hover{
+    background-color: #f6b220;
+    transition: all 300ms ease-in-out;
+}
+
+
+nav ul li:first-child{
+    background-color: #00ab4e;
+    font-size: 33px;
+    text-transform: uppercase;
+}
+
+nav ul li:first-child:after {
+content: '\f0c9';
+font-family: FontAwesome;
+margin-left: 40px;
+font-size: 20px;
+}
+
+nav ul li:hover>ul{
+    display: block;
+}
+nav ul li ul{
+    display:none;
+}
+
+nav ul li ul li{
+
+}

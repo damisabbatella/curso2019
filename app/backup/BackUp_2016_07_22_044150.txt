@@ -1,0 +1,450 @@
+CREATE TABLE `alumnos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `pais` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `contrasena` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `codigo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `confirmar` int(11) NOT NULL,
+  `status` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+CREATE TABLE `capitulos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `idcursosc` int(11) NOT NULL,
+  `descripcion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `numero` int(10) NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `capitulos` VALUES ('35', 'que es un mensaje de error', '1', 'ddd', '1', '1');
+INSERT INTO `capitulos` VALUES ('36', 'concatenacion', '4', 'hs', '2', '0');
+INSERT INTO `capitulos` VALUES ('37', 'Cómo hacer update', '4', 'Ppp', '2', '1');
+
+CREATE TABLE `comentarios` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `idleccion` int(11) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  `fechapreg` datetime NOT NULL,
+  `pregunta` text COLLATE utf8_spanish_ci NOT NULL,
+  `fecharesp` datetime NOT NULL,
+  `respuesta` text COLLATE utf8_spanish_ci NOT NULL,
+  `idadmin` int(11) NOT NULL,
+  `estado` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `comentarios` VALUES ('24', '9', '90', '2016-07-10 06:38:22', 'Como creo una cookie', '2016-07-10 10:31:24', 'ok dale', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('25', '10', '90', '2016-07-10 07:05:16', 'como hacer una session', '2016-07-10 10:31:47', 'quedamos asi', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('26', '8', '91', '2016-07-10 10:35:13', 'hola como hacer una funcion', '2016-07-10 10:35:34', 'es facil', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('27', '9', '91', '2016-07-10 10:35:58', 'como hacer una cookie', '2016-07-10 10:36:24', 'se hace de esta forma', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('28', '8', '90', '2016-07-10 10:47:43', 'no entiendo', '2016-07-10 10:51:27', 'sdsds', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('29', '8', '90', '2016-07-10 10:51:06', 'pero como ', '2016-07-10 10:51:21', 'dddd', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('30', '8', '90', '2016-07-10 11:09:21', 'dsdsds', '2016-07-10 11:11:35', 'fffff', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('31', '8', '90', '2016-07-10 11:22:05', 'dfdfdfdfdf', '2016-07-10 11:34:29', 'wwwww', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('32', '9', '90', '2016-07-10 11:36:23', 'es facil', '2016-07-10 11:39:03', 'dfdfdfd', '0', 'respondido', '1');
+INSERT INTO `comentarios` VALUES ('33', '9', '90', '2016-07-10 12:17:44', 'ok todo biwe', '0000-00-00 00:00:00', '', '0', 'enviado', '1');
+INSERT INTO `comentarios` VALUES ('34', '9', '90', '2016-07-12 07:38:27', 'holla', '0000-00-00 00:00:00', '', '0', 'enviado', '1');
+
+CREATE TABLE `consultas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `hora` time NOT NULL,
+  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `consulta` text COLLATE utf8_spanish_ci NOT NULL,
+  `respuesta` text COLLATE utf8_spanish_ci NOT NULL,
+  `horarespuesta` datetime NOT NULL,
+  `estado` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `consultas` VALUES ('6', '2016-05-10', '09:16:59', 'Edgardo Villafañe', '1163543039', 'edgardovillafane@gmail.com', 'Me gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuestaMe gustaría sabe cuando comienzan los curso y cuanto cuestaMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuestaMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuestaMe gustaría sabe cuando comienzan los curso y cuanto cuesta\r\nMe gustaría sabe cuando comienzan los curso y cuanto cuesta', 'Comienzan en junio y salen 3000 pesos. Comienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesosComienzan en junio y salen 3000 pesos\r\nComienzan en junio y salen 3000 pesos', '2016-05-10 09:17:32', 'respondido', '0');
+INSERT INTO `consultas` VALUES ('7', '2016-05-12', '08:06:18', 'Marcelo', '45554444', 'marcelo@iterario.com', 'prueba de mensaje', 'esta es una respuesta de prueba', '2016-05-12 09:18:23', 'respondido', '0');
+INSERT INTO `consultas` VALUES ('8', '2016-05-12', '09:07:12', 'ghdfhdf', 'dfgdfg', 'dfgdfg@hjgjh.com', 'dfgdfgdf', 'bnmbnmbnmbnmbm', '2016-05-12 09:19:53', 'respondido', '0');
+INSERT INTO `consultas` VALUES ('9', '2016-05-12', '09:07:49', 'uuioiuou', 'rtyrtyr', 'uuio@tyu.com', 'rtyrtyrty', 'dfgdfgdgf', '2016-05-12 12:13:33', 'respondido', '0');
+INSERT INTO `consultas` VALUES ('10', '2016-05-12', '09:09:00', 'fghfghf', 'fghfgh', 'fghfgh@fgh.com', 'fghfgh', 'sale 15$', '2016-06-14 15:17:50', 'respondido', '0');
+INSERT INTO `consultas` VALUES ('11', '2016-05-12', '09:45:07', 'dfdfgdfg', 'dfgdfg', 'dfgdfg@rty.com', 'dfgdfg', 'sdsdsdsdsdsdsd', '2016-07-10 11:32:58', 'respondido', '0');
+INSERT INTO `consultas` VALUES ('12', '2016-05-12', '09:48:07', 'fghfgh', 'fghfg', 'fgh@gfjh.com', 'fghfgh', '', '0000-00-00 00:00:00', 'enviado', '0');
+INSERT INTO `consultas` VALUES ('13', '2016-05-12', '09:49:32', 'tyutyu', 'tyut', 'tyuty@rty.com', 'fghfgh', '', '0000-00-00 00:00:00', 'enviado', '0');
+INSERT INTO `consultas` VALUES ('14', '2016-05-12', '09:51:35', 'ghjghj', 'fghfgh', 'ghj@fg.com', 'fgh', '', '0000-00-00 00:00:00', 'enviado', '0');
+INSERT INTO `consultas` VALUES ('15', '2016-05-12', '10:01:48', 'dfgdfg', 'cvbcvb', 'dfg@rty.com', 'cvbcvb', '', '0000-00-00 00:00:00', 'enviado', '0');
+INSERT INTO `consultas` VALUES ('16', '2016-05-12', '10:03:24', 'fghfgh', 'fghfgh', 'fghfgh@tyut.com', 'fghfgh', '', '0000-00-00 00:00:00', 'enviado', '0');
+INSERT INTO `consultas` VALUES ('17', '2016-05-12', '10:05:26', 'xcvxcv', 'cvbvcb', 'xcv@rty.com', 'cvbcvb', '', '0000-00-00 00:00:00', 'enviado', '0');
+INSERT INTO `consultas` VALUES ('18', '2016-06-15', '05:16:13', 'marcelo', '1136883354', 'iterario2016@gmail.com', 'Quiero hacer clases de modista. ', 'Pelotuda, no doy clases me modista', '2016-06-15 05:17:25', 'respondido', '0');
+
+CREATE TABLE `cursos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `curso` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
+  `texto` text COLLATE utf8_spanish_ci NOT NULL,
+  `orden` int(11) NOT NULL,
+  `imagen` text COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `cursos` VALUES ('1', 'AJAX', 'Técnicas de Desarrollo Web interactivas ', '', '6', 'ajax.jpg', '1');
+INSERT INTO `cursos` VALUES ('3', 'JAVASCRIPT', 'Programación Javascript', '', '4', 'js.jpg', '1');
+INSERT INTO `cursos` VALUES ('4', 'PHP', 'Programación PHP', '', '3', 'php.jpg', '1');
+INSERT INTO `cursos` VALUES ('5', 'CSS 3', 'Diseño Web con CSS 3', '<p>dssds</p>', '2', 'css.jpg', '1');
+INSERT INTO `cursos` VALUES ('8', 'HTML2', 'asasasa', '<p>asasasasdsds</p>', '3', 'port-267487024.png', '1');
+INSERT INTO `cursos` VALUES ('9', 'BOOTSTRAP', 'Diseño web Responsive', '', '7', 'bootstrap.jpg', '1');
+INSERT INTO `cursos` VALUES ('11', 'LARAVEL 5', 'Desarrollo web para alta productividad', '', '8', 'laravel.jpg', '1');
+INSERT INTO `cursos` VALUES ('12', 'MYSQL', 'Creación y modelado de Base de datos', '', '5', 'mysql.jpg', '1');
+
+CREATE TABLE `lecciones` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `idcurso` int(11) NOT NULL,
+  `idcapitulo` int(11) NOT NULL,
+  `titulo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `copete` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
+  `numero` int(10) NOT NULL,
+  `status` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `lecciones` VALUES ('6', '9', '18', 'dd', 'dd', 'dad', '0', '1');
+INSERT INTO `lecciones` VALUES ('7', '3', '11', 'Introduccion', 'Intro', 'En este capitulo vamos a ver la introduccion a javascript', '0', '1');
+INSERT INTO `lecciones` VALUES ('8', '3', '11', 'Funciones en JS', 'funciones', 'Vamos a aprender funciones', '0', '1');
+INSERT INTO `lecciones` VALUES ('9', '3', '20', 'uso de cookies en JS', 'cookies en js', 'Como usa las cookies', '0', '1');
+INSERT INTO `lecciones` VALUES ('10', '3', '20', 'uso de sesiones en js', 'sesiones js', 'aprenderemos sesiones js', '0', '0');
+INSERT INTO `lecciones` VALUES ('11', '9', '17', 'pppp', 'ppp', 'pppp', '0', '0');
+
+CREATE TABLE `pais` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `paisnombre` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `pais` VALUES ('1', 'Australia');
+INSERT INTO `pais` VALUES ('2', 'Austria');
+INSERT INTO `pais` VALUES ('3', 'Azerbaiyán');
+INSERT INTO `pais` VALUES ('4', 'Anguilla');
+INSERT INTO `pais` VALUES ('5', 'Argentina');
+INSERT INTO `pais` VALUES ('6', 'Armenia');
+INSERT INTO `pais` VALUES ('7', 'Bielorrusia');
+INSERT INTO `pais` VALUES ('8', 'Belice');
+INSERT INTO `pais` VALUES ('9', 'Bélgica');
+INSERT INTO `pais` VALUES ('10', 'Bermudas');
+INSERT INTO `pais` VALUES ('11', 'Bulgaria');
+INSERT INTO `pais` VALUES ('12', 'Brasil');
+INSERT INTO `pais` VALUES ('13', 'Reino Unido');
+INSERT INTO `pais` VALUES ('14', 'Hungría');
+INSERT INTO `pais` VALUES ('15', 'Vietnam');
+INSERT INTO `pais` VALUES ('16', 'Haiti');
+INSERT INTO `pais` VALUES ('17', 'Guadalupe');
+INSERT INTO `pais` VALUES ('18', 'Alemania');
+INSERT INTO `pais` VALUES ('19', 'Países Bajos, Holanda');
+INSERT INTO `pais` VALUES ('20', 'Grecia');
+INSERT INTO `pais` VALUES ('21', 'Georgia');
+INSERT INTO `pais` VALUES ('22', 'Dinamarca');
+INSERT INTO `pais` VALUES ('23', 'Egipto');
+INSERT INTO `pais` VALUES ('24', 'Israel');
+INSERT INTO `pais` VALUES ('25', 'India');
+INSERT INTO `pais` VALUES ('26', 'Irán');
+INSERT INTO `pais` VALUES ('27', 'Irlanda');
+INSERT INTO `pais` VALUES ('28', 'España');
+INSERT INTO `pais` VALUES ('29', 'Italia');
+INSERT INTO `pais` VALUES ('30', 'Kazajstán');
+INSERT INTO `pais` VALUES ('31', 'Camerún');
+INSERT INTO `pais` VALUES ('32', 'Canadá');
+INSERT INTO `pais` VALUES ('33', 'Chipre');
+INSERT INTO `pais` VALUES ('34', 'Kirguistán');
+INSERT INTO `pais` VALUES ('35', 'China');
+INSERT INTO `pais` VALUES ('36', 'Costa Rica');
+INSERT INTO `pais` VALUES ('37', 'Kuwait');
+INSERT INTO `pais` VALUES ('38', 'Letonia');
+INSERT INTO `pais` VALUES ('39', 'Libia');
+INSERT INTO `pais` VALUES ('40', 'Lituania');
+INSERT INTO `pais` VALUES ('41', 'Luxemburgo');
+INSERT INTO `pais` VALUES ('42', 'México');
+INSERT INTO `pais` VALUES ('43', 'Moldavia');
+INSERT INTO `pais` VALUES ('44', 'Mónaco');
+INSERT INTO `pais` VALUES ('45', 'Nueva Zelanda');
+INSERT INTO `pais` VALUES ('46', 'Noruega');
+INSERT INTO `pais` VALUES ('47', 'Polonia');
+INSERT INTO `pais` VALUES ('48', 'Portugal');
+INSERT INTO `pais` VALUES ('49', 'Reunión');
+INSERT INTO `pais` VALUES ('50', 'Rusia');
+INSERT INTO `pais` VALUES ('51', 'El Salvador');
+INSERT INTO `pais` VALUES ('52', 'Eslovaquia');
+INSERT INTO `pais` VALUES ('53', 'Eslovenia');
+INSERT INTO `pais` VALUES ('54', 'Surinam');
+INSERT INTO `pais` VALUES ('55', 'Estados Unidos');
+INSERT INTO `pais` VALUES ('56', 'Tadjikistan');
+INSERT INTO `pais` VALUES ('57', 'Turkmenistan');
+INSERT INTO `pais` VALUES ('58', 'Islas Turcas y Caicos');
+INSERT INTO `pais` VALUES ('59', 'Turquía');
+INSERT INTO `pais` VALUES ('60', 'Uganda');
+INSERT INTO `pais` VALUES ('61', 'Uzbekistán');
+INSERT INTO `pais` VALUES ('62', 'Ucrania');
+INSERT INTO `pais` VALUES ('63', 'Finlandia');
+INSERT INTO `pais` VALUES ('64', 'Francia');
+INSERT INTO `pais` VALUES ('65', 'República Checa');
+INSERT INTO `pais` VALUES ('66', 'Suiza');
+INSERT INTO `pais` VALUES ('67', 'Suecia');
+INSERT INTO `pais` VALUES ('68', 'Estonia');
+INSERT INTO `pais` VALUES ('69', 'Corea del Sur');
+INSERT INTO `pais` VALUES ('70', 'Japón');
+INSERT INTO `pais` VALUES ('71', 'Croacia');
+INSERT INTO `pais` VALUES ('72', 'Rumanía');
+INSERT INTO `pais` VALUES ('73', 'Hong Kong');
+INSERT INTO `pais` VALUES ('74', 'Indonesia');
+INSERT INTO `pais` VALUES ('75', 'Jordania');
+INSERT INTO `pais` VALUES ('76', 'Malasia');
+INSERT INTO `pais` VALUES ('77', 'Singapur');
+INSERT INTO `pais` VALUES ('78', 'Taiwan');
+INSERT INTO `pais` VALUES ('79', 'Bosnia y Herzegovina');
+INSERT INTO `pais` VALUES ('80', 'Bahamas');
+INSERT INTO `pais` VALUES ('81', 'Chile');
+INSERT INTO `pais` VALUES ('82', 'Colombia');
+INSERT INTO `pais` VALUES ('83', 'Islandia');
+INSERT INTO `pais` VALUES ('84', 'Corea del Norte');
+INSERT INTO `pais` VALUES ('85', 'Macedonia');
+INSERT INTO `pais` VALUES ('86', 'Malta');
+INSERT INTO `pais` VALUES ('87', 'Pakistán');
+INSERT INTO `pais` VALUES ('88', 'Papúa-Nueva Guinea');
+INSERT INTO `pais` VALUES ('89', 'Perú');
+INSERT INTO `pais` VALUES ('90', 'Filipinas');
+INSERT INTO `pais` VALUES ('91', 'Arabia Saudita');
+INSERT INTO `pais` VALUES ('92', 'Tailandia');
+INSERT INTO `pais` VALUES ('93', 'Emiratos árabes Unidos');
+INSERT INTO `pais` VALUES ('94', 'Groenlandia');
+INSERT INTO `pais` VALUES ('95', 'Venezuela');
+INSERT INTO `pais` VALUES ('96', 'Zimbabwe');
+INSERT INTO `pais` VALUES ('97', 'Kenia');
+INSERT INTO `pais` VALUES ('98', 'Algeria');
+INSERT INTO `pais` VALUES ('99', 'Líbano');
+INSERT INTO `pais` VALUES ('100', 'Botsuana');
+INSERT INTO `pais` VALUES ('101', 'Tanzania');
+INSERT INTO `pais` VALUES ('102', 'Namibia');
+INSERT INTO `pais` VALUES ('103', 'Ecuador');
+INSERT INTO `pais` VALUES ('104', 'Marruecos');
+INSERT INTO `pais` VALUES ('105', 'Ghana');
+INSERT INTO `pais` VALUES ('106', 'Siria');
+INSERT INTO `pais` VALUES ('107', 'Nepal');
+INSERT INTO `pais` VALUES ('108', 'Mauritania');
+INSERT INTO `pais` VALUES ('109', 'Seychelles');
+INSERT INTO `pais` VALUES ('110', 'Paraguay');
+INSERT INTO `pais` VALUES ('111', 'Uruguay');
+INSERT INTO `pais` VALUES ('112', 'Congo (Brazzaville)');
+INSERT INTO `pais` VALUES ('113', 'Cuba');
+INSERT INTO `pais` VALUES ('114', 'Albania');
+INSERT INTO `pais` VALUES ('115', 'Nigeria');
+INSERT INTO `pais` VALUES ('116', 'Zambia');
+INSERT INTO `pais` VALUES ('117', 'Mozambique');
+INSERT INTO `pais` VALUES ('119', 'Angola');
+INSERT INTO `pais` VALUES ('120', 'Sri Lanka');
+INSERT INTO `pais` VALUES ('121', 'Etiopía');
+INSERT INTO `pais` VALUES ('122', 'Túnez');
+INSERT INTO `pais` VALUES ('123', 'Bolivia');
+INSERT INTO `pais` VALUES ('124', 'Panamá');
+INSERT INTO `pais` VALUES ('125', 'Malawi');
+INSERT INTO `pais` VALUES ('126', 'Liechtenstein');
+INSERT INTO `pais` VALUES ('127', 'Bahrein');
+INSERT INTO `pais` VALUES ('128', 'Barbados');
+INSERT INTO `pais` VALUES ('130', 'Chad');
+INSERT INTO `pais` VALUES ('131', 'Man, Isla de');
+INSERT INTO `pais` VALUES ('132', 'Jamaica');
+INSERT INTO `pais` VALUES ('133', 'Malí');
+INSERT INTO `pais` VALUES ('134', 'Madagascar');
+INSERT INTO `pais` VALUES ('135', 'Senegal');
+INSERT INTO `pais` VALUES ('136', 'Togo');
+INSERT INTO `pais` VALUES ('137', 'Honduras');
+INSERT INTO `pais` VALUES ('138', 'República Dominicana');
+INSERT INTO `pais` VALUES ('139', 'Mongolia');
+INSERT INTO `pais` VALUES ('140', 'Irak');
+INSERT INTO `pais` VALUES ('141', 'Sudáfrica');
+INSERT INTO `pais` VALUES ('142', 'Aruba');
+INSERT INTO `pais` VALUES ('143', 'Gibraltar');
+INSERT INTO `pais` VALUES ('144', 'Afganistán');
+INSERT INTO `pais` VALUES ('145', 'Andorra');
+INSERT INTO `pais` VALUES ('147', 'Antigua y Barbuda');
+INSERT INTO `pais` VALUES ('149', 'Bangladesh');
+INSERT INTO `pais` VALUES ('151', 'Benín');
+INSERT INTO `pais` VALUES ('152', 'Bután');
+INSERT INTO `pais` VALUES ('154', 'Islas Virgenes Británicas');
+INSERT INTO `pais` VALUES ('155', 'Brunéi');
+INSERT INTO `pais` VALUES ('156', 'Burkina Faso');
+INSERT INTO `pais` VALUES ('157', 'Burundi');
+INSERT INTO `pais` VALUES ('158', 'Camboya');
+INSERT INTO `pais` VALUES ('159', 'Cabo Verde');
+INSERT INTO `pais` VALUES ('164', 'Comores');
+INSERT INTO `pais` VALUES ('165', 'Congo (Kinshasa)');
+INSERT INTO `pais` VALUES ('166', 'Cook, Islas');
+INSERT INTO `pais` VALUES ('168', 'Costa de Marfil');
+INSERT INTO `pais` VALUES ('169', 'Djibouti, Yibuti');
+INSERT INTO `pais` VALUES ('171', 'Timor Oriental');
+INSERT INTO `pais` VALUES ('172', 'Guinea Ecuatorial');
+INSERT INTO `pais` VALUES ('173', 'Eritrea');
+INSERT INTO `pais` VALUES ('175', 'Feroe, Islas');
+INSERT INTO `pais` VALUES ('176', 'Fiyi');
+INSERT INTO `pais` VALUES ('178', 'Polinesia Francesa');
+INSERT INTO `pais` VALUES ('180', 'Gabón');
+INSERT INTO `pais` VALUES ('181', 'Gambia');
+INSERT INTO `pais` VALUES ('184', 'Granada');
+INSERT INTO `pais` VALUES ('185', 'Guatemala');
+INSERT INTO `pais` VALUES ('186', 'Guernsey');
+INSERT INTO `pais` VALUES ('187', 'Guinea');
+INSERT INTO `pais` VALUES ('188', 'Guinea-Bissau');
+INSERT INTO `pais` VALUES ('189', 'Guyana');
+INSERT INTO `pais` VALUES ('193', 'Jersey');
+INSERT INTO `pais` VALUES ('195', 'Kiribati');
+INSERT INTO `pais` VALUES ('196', 'Laos');
+INSERT INTO `pais` VALUES ('197', 'Lesotho');
+INSERT INTO `pais` VALUES ('198', 'Liberia');
+INSERT INTO `pais` VALUES ('200', 'Maldivas');
+INSERT INTO `pais` VALUES ('201', 'Martinica');
+INSERT INTO `pais` VALUES ('202', 'Mauricio');
+INSERT INTO `pais` VALUES ('205', 'Myanmar');
+INSERT INTO `pais` VALUES ('206', 'Nauru');
+INSERT INTO `pais` VALUES ('207', 'Antillas Holandesas');
+INSERT INTO `pais` VALUES ('208', 'Nueva Caledonia');
+INSERT INTO `pais` VALUES ('209', 'Nicaragua');
+INSERT INTO `pais` VALUES ('210', 'Níger');
+INSERT INTO `pais` VALUES ('212', 'Norfolk Island');
+INSERT INTO `pais` VALUES ('213', 'Omán');
+INSERT INTO `pais` VALUES ('215', 'Isla Pitcairn');
+INSERT INTO `pais` VALUES ('216', 'Qatar');
+INSERT INTO `pais` VALUES ('217', 'Ruanda');
+INSERT INTO `pais` VALUES ('218', 'Santa Elena');
+INSERT INTO `pais` VALUES ('219', 'San Cristobal y Nevis');
+INSERT INTO `pais` VALUES ('220', 'Santa Lucía');
+INSERT INTO `pais` VALUES ('221', 'San Pedro y Miquelón');
+INSERT INTO `pais` VALUES ('222', 'San Vincente y Granadinas');
+INSERT INTO `pais` VALUES ('223', 'Samoa');
+INSERT INTO `pais` VALUES ('224', 'San Marino');
+INSERT INTO `pais` VALUES ('225', 'San Tomé y Príncipe');
+INSERT INTO `pais` VALUES ('226', 'Serbia y Montenegro');
+INSERT INTO `pais` VALUES ('227', 'Sierra Leona');
+INSERT INTO `pais` VALUES ('228', 'Islas Salomón');
+INSERT INTO `pais` VALUES ('229', 'Somalia');
+INSERT INTO `pais` VALUES ('232', 'Sudán');
+INSERT INTO `pais` VALUES ('234', 'Swazilandia');
+INSERT INTO `pais` VALUES ('235', 'Tokelau');
+INSERT INTO `pais` VALUES ('236', 'Tonga');
+INSERT INTO `pais` VALUES ('237', 'Trinidad y Tobago');
+INSERT INTO `pais` VALUES ('239', 'Tuvalu');
+INSERT INTO `pais` VALUES ('240', 'Vanuatu');
+INSERT INTO `pais` VALUES ('241', 'Wallis y Futuna');
+INSERT INTO `pais` VALUES ('242', 'Sáhara Occidental');
+INSERT INTO `pais` VALUES ('243', 'Yemen');
+INSERT INTO `pais` VALUES ('246', 'Puerto Rico');
+
+CREATE TABLE `preguntas` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `idcapitulo` int(10) NOT NULL,
+  `idcurso` int(10) NOT NULL,
+  `texto` text COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `preguntas` VALUES ('70', '4', '37', 'que es un msdsd', '1');
+
+CREATE TABLE `prueba` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `idleccion` int(11) NOT NULL,
+  `idalumno` int(11) NOT NULL,
+  `nota` int(11) NOT NULL,
+  `estado` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+
+CREATE TABLE `rel_cursos_alumnos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idcurso` int(100) NOT NULL,
+  `idalumno` int(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=latin1;
+
+INSERT INTO `rel_cursos_alumnos` VALUES ('102', '3', '90');
+INSERT INTO `rel_cursos_alumnos` VALUES ('103', '3', '91');
+
+CREATE TABLE `respuestas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `texto` text COLLATE utf8_spanish_ci NOT NULL,
+  `idpregunta` int(11) NOT NULL,
+  `correcta` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `respuestas` VALUES ('1', 'sdsdsdsdsds', '4', '0');
+INSERT INTO `respuestas` VALUES ('2', 'ghj', '4', '0');
+INSERT INTO `respuestas` VALUES ('3', 'sdsdsdsdsds', '4', '0');
+INSERT INTO `respuestas` VALUES ('4', 'sdsds', '4', '0');
+INSERT INTO `respuestas` VALUES ('5', 'dsdsds', '4', '0');
+INSERT INTO `respuestas` VALUES ('6', 'fdfd', '4', '0');
+INSERT INTO `respuestas` VALUES ('7', 'ppppp', '4', '0');
+INSERT INTO `respuestas` VALUES ('8', 'ppppp', '4', '0');
+INSERT INTO `respuestas` VALUES ('9', 'sdsdsdss', '4', '0');
+INSERT INTO `respuestas` VALUES ('10', 'dsdsdsdssdsdsdsd', '4', '0');
+INSERT INTO `respuestas` VALUES ('11', 'sdsdssdsdsdsddffghh', '4', '0');
+INSERT INTO `respuestas` VALUES ('12', 'blanco', '4', '0');
+INSERT INTO `respuestas` VALUES ('13', 'rojo', '4', '0');
+INSERT INTO `respuestas` VALUES ('14', 'azul', '4', '0');
+INSERT INTO `respuestas` VALUES ('15', 'azul', '4', '0');
+INSERT INTO `respuestas` VALUES ('16', 'style=\"bg-color\";', '5', '0');
+INSERT INTO `respuestas` VALUES ('17', 'style=\"back-color\";', '5', '0');
+INSERT INTO `respuestas` VALUES ('18', 'style=\"background-color\";', '5', '1');
+INSERT INTO `respuestas` VALUES ('19', 'si', '1', '0');
+INSERT INTO `respuestas` VALUES ('20', 'no', '1', '0');
+INSERT INTO `respuestas` VALUES ('21', 'no se', '1', '0');
+INSERT INTO `respuestas` VALUES ('22', 'si', '1', '0');
+INSERT INTO `respuestas` VALUES ('23', 'si', '1', '0');
+INSERT INTO `respuestas` VALUES ('24', 'no', '1', '0');
+INSERT INTO `respuestas` VALUES ('25', 'no se', '1', '0');
+INSERT INTO `respuestas` VALUES ('26', 'no', '6', '0');
+INSERT INTO `respuestas` VALUES ('27', 'si', '6', '0');
+INSERT INTO `respuestas` VALUES ('28', 'no se', '6', '0');
+INSERT INTO `respuestas` VALUES ('29', '5', '7', '0');
+INSERT INTO `respuestas` VALUES ('30', '10', '7', '0');
+INSERT INTO `respuestas` VALUES ('31', '0', '7', '0');
+INSERT INTO `respuestas` VALUES ('32', 'ninguna de las anteriores', '7', '0');
+INSERT INTO `respuestas` VALUES ('33', 'infinito', '7', '0');
+INSERT INTO `respuestas` VALUES ('37', '\"style:backgrond-color:white\"', '5', '0');
+INSERT INTO `respuestas` VALUES ('38', 'ninguna', '5', '0');
+INSERT INTO `respuestas` VALUES ('39', 'todas', '5', '0');
+INSERT INTO `respuestas` VALUES ('41', 'algunas veces', '6', '0');
+INSERT INTO `respuestas` VALUES ('42', 'depende si se programar php', '6', '0');
+INSERT INTO `respuestas` VALUES ('43', 'depende del hosting', '6', '0');
+INSERT INTO `respuestas` VALUES ('48', 'verde', '3', '0');
+INSERT INTO `respuestas` VALUES ('49', 'rojo', '3', '0');
+INSERT INTO `respuestas` VALUES ('50', 'azul', '3', '0');
+INSERT INTO `respuestas` VALUES ('51', 'amarillo', '3', '0');
+INSERT INTO `respuestas` VALUES ('52', 'blanco', '3', '0');
+INSERT INTO `respuestas` VALUES ('53', 'naranja', '3', '0');
+INSERT INTO `respuestas` VALUES ('54', 'si', '8', '0');
+INSERT INTO `respuestas` VALUES ('55', 'no', '8', '0');
+INSERT INTO `respuestas` VALUES ('56', 'a veces si', '8', '0');
+INSERT INTO `respuestas` VALUES ('58', 'ocre', '3', '0');
+INSERT INTO `respuestas` VALUES ('59', 'a veces no', '8', '1');
+INSERT INTO `respuestas` VALUES ('61', 'sdsd', '16', '0');
+INSERT INTO `respuestas` VALUES ('62', 'hols', '17', '1');
+INSERT INTO `respuestas` VALUES ('63', 'ni idea', '21', '0');
+INSERT INTO `respuestas` VALUES ('64', 'cualquiera', '21', '1');
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+INSERT INTO `usuarios` VALUES ('39', 'da', 'dami_sabb@hotmai', '', '0');
+INSERT INTO `usuarios` VALUES ('34', 'damsabb', 'dsabbatella@yahoo.com.ar', '1234', '1');
+
